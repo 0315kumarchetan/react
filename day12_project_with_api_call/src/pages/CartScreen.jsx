@@ -52,7 +52,7 @@ console.log(cartItems);
                   </p>
 
                   <p className="text-green-600 font-bold mt-2">
-                    ${item.price}
+                    ₹{item.price}
                   </p>
                    <div className="grid grid-cols-2 gap-2">
                      <button className='w-full mt-2 px-3 py-1 text-white bg-gray-400 flex justify-center gap-2 rounded hover:shadow-xl transition duration-400'>
@@ -81,7 +81,7 @@ console.log(cartItems);
           {/* Total Section */}
           <div className="mt-6 border-t pt-4 flex justify-between items-center">
             <h2 className="text-2xl font-bold">
-              Total: ${totalPrice.toFixed(2)}
+              Total: ₹{totalPrice.toFixed(2)}
             </h2>
 
             <button className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
