@@ -43,22 +43,20 @@ const ShopPage = () => {
   },[])
 
 
-  useEffect(() => {
-    if (products.length < 1) {
-      const getProducts = async () => {
-        try {
-          let res = await axiosInstance.get("/products");
-          console.log(res);
-          setProducts(res.data.products);
-          setAllProducts(res.data.products)
-        } catch (error) {
-          console.log("Error:", error);
-        }
-      };
 
-      getProducts(); 
+  useEffect(() => {
+  const getProducts = async () => {
+    try {
+      let res = await axiosInstance.get("/products");
+      setProducts(res.data.products);
+      setAllProducts(res.data.products);
+    } catch (error) {
+      console.log("Error:", error);
     }
-  }, []);
+  };
+
+  getProducts();
+}, []);
 
   let handleSortOnChange =(e)=>{
       try {
